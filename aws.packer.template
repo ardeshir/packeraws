@@ -1,6 +1,9 @@
 {
+	"variables": {},
 	"builders" : [
 		{
+		 "vpc_id" : "vpc_3d137558",
+                "subnet_id" : "subnet-8dfd50d4",
 		"type": "amazon-ebs",
 		"region": "us-east-1",
 		"source_ami": "ami-2d39803a",
