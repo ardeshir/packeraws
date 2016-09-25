@@ -1,0 +1,22 @@
+{
+	"builders" : [
+		{
+		"type": "amazon-ebs",
+		"region": "us-east-1",
+		"source_ami": "ami-2d398003a",
+		"instance_type": "t2.micro",
+		"ssh_username": "ubuntu",
+		"ami_name": "MiddleTier-{{isotime | clean_ami_name}}",
+		"ami_description" : "Amazon AMI designed by ardeshir",
+			"tags": {
+				"role": "MiddleTier"
+			},
+			"run_tags" : {
+				"role": "buildSystem"
+			}
+
+		}
+	] 
+
+}			
+
