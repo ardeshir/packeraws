@@ -2,7 +2,7 @@
 	"variables": {},
 	"builders" : [
 		{
-		 "vpc_id" : "vpc_3d137558",
+		 "vpc_id" : "vpc-3d137558",
                 "subnet_id" : "subnet-8dfd50d4",
 		"type": "amazon-ebs",
 		"region": "us-east-1",
