@@ -71,3 +71,30 @@ Build 'amazon-ebs' finished.
 
 us-east-1: ami-fd6c29ea
 [root@univrs packertmpl]#
+Univrsio-2:keys administrator$ ssh -i "ctkeys.pem" ubuntu@54.210.238.53
+Welcome to Ubuntu 14.04.4 LTS (GNU/Linux 3.13.0-91-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sun Sep 25 17:19:43 UTC 2016
+
+  System load:  0.0               Processes:           98
+  Usage of /:   10.0% of 7.74GB   Users logged in:     0
+  Memory usage: 5%                IP address for eth0: 172.30.0.37
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+0 packages can be updated.
+0 updates are security updates.
+
+New release '16.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Sun Sep 25 17:19:43 2016 from 71-220-39-77.mpls.qwest.net
+ubuntu@ip-172-30-0-37:~$ 
