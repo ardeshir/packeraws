@@ -1,0 +1,73 @@
+[root@univrs packertmpl]# packer build -debug aws.packer
+Debug mode enabled. Builds will not be parallelized.
+amazon-ebs output will be in this color.
+
+==> amazon-ebs: Prevalidating AMI Name...
+==> amazon-ebs: Pausing after run of step 'StepPreValidate'. Press enter to continue. 
+==> amazon-ebs: Inspecting the source AMI...
+==> amazon-ebs: Pausing after run of step 'StepSourceAMIInfo'. Press enter to continue. 
+==> amazon-ebs: Creating temporary keypair: packer 57e80153-364a-1fb9-60d7-c479558ceceb
+    amazon-ebs: Saving key for debug purposes: ec2_amazon-ebs.pem
+==> amazon-ebs: Pausing after run of step 'StepKeyPair'. Press enter to continue. 
+==> amazon-ebs: Creating temporary security group for this instance...
+==> amazon-ebs: Authorizing access to port 22 the temporary security group...
+==> amazon-ebs: Pausing after run of step 'StepSecurityGroup'. Press enter to continue. 
+==> amazon-ebs: Pausing after run of step 'stepCleanupVolumes'. Press enter to continue. 
+==> amazon-ebs: Launching a source AWS instance...
+    amazon-ebs: Instance ID: i-b0b7f3a6
+==> amazon-ebs: Waiting for instance (i-b0b7f3a6) to become ready...
+    amazon-ebs: Public IP: 52.90.50.64
+    amazon-ebs: Private IP: 172.30.0.61
+==> amazon-ebs: Pausing after run of step 'StepRunSourceInstance'. Press enter to continue. 
+==> amazon-ebs: Pausing after run of step 'stepTagEBSVolumes'. Press enter to continue. 
+==> amazon-ebs: Pausing after run of step 'StepGetPassword'. Press enter to continue. 
+==> amazon-ebs: Waiting for SSH to become available...
+==> amazon-ebs: Connected to SSH!
+==> amazon-ebs: Pausing after run of step 'StepConnect'. Press enter to continue. 
+==> amazon-ebs: Pausing after run of step 'StepProvision'. Press enter to continue. 
+==> amazon-ebs: Stopping the source instance...
+==> amazon-ebs: Waiting for the instance to stop...
+==> amazon-ebs: Pausing after run of step 'stepStopInstance'. Press enter to continue. 
+==> amazon-ebs: Pausing after run of step 'stepModifyInstance'. Press enter to continue. 
+==> amazon-ebs: Pausing after run of step 'StepDeregisterAMI'. Press enter to continue. 
+==> amazon-ebs: Creating the AMI: MiddleTier-2016-09-25T16-54-43Z
+    amazon-ebs: AMI: ami-fd6c29ea
+==> amazon-ebs: Waiting for AMI to become ready...
+==> amazon-ebs: Pausing after run of step 'stepCreateAMI'. Press enter to continue. 
+==> amazon-ebs: Pausing after run of step 'StepAMIRegionCopy'. Press enter to continue. 
+==> amazon-ebs: Modifying attributes on AMI (ami-fd6c29ea)...
+    amazon-ebs: Modifying: description
+==> amazon-ebs: Pausing after run of step 'StepModifyAMIAttributes'. Press enter to continue. 
+==> amazon-ebs: Adding tags to AMI (ami-fd6c29ea)...
+    amazon-ebs: Adding tag: "role": "MiddleTier"
+==> amazon-ebs: Tagging snapshot: snap-59c1d120
+==> amazon-ebs: Pausing after run of step 'StepCreateTags'. Press enter to continue. 
+==> amazon-ebs: Pausing before cleanup of step 'StepCreateTags'. Press enter to continue. 
+==> amazon-ebs: Pausing before cleanup of step 'StepModifyAMIAttributes'. Press enter to continue. 
+==> amazon-ebs: Pausing before cleanup of step 'StepAMIRegionCopy'. Press enter to continue. 
+==> amazon-ebs: Pausing before cleanup of step 'stepCreateAMI'. Press enter to continue. 
+==> amazon-ebs: Pausing before cleanup of step 'StepDeregisterAMI'. Press enter to continue. 
+==> amazon-ebs: Pausing before cleanup of step 'stepModifyInstance'. Press enter to continue. 
+==> amazon-ebs: Pausing before cleanup of step 'stepStopInstance'. Press enter to continue. 
+==> amazon-ebs: Pausing before cleanup of step 'StepProvision'. Press enter to continue. 
+==> amazon-ebs: Pausing before cleanup of step 'StepConnect'. Press enter to continue. 
+==> amazon-ebs: Pausing before cleanup of step 'StepGetPassword'. Press enter to continue. 
+==> amazon-ebs: Pausing before cleanup of step 'stepTagEBSVolumes'. Press enter to continue. 
+==> amazon-ebs: Pausing before cleanup of step 'StepRunSourceInstance'. Press enter to continue. 
+==> amazon-ebs: Terminating the source AWS instance...
+==> amazon-ebs: Pausing before cleanup of step 'stepCleanupVolumes'. Press enter to continue. 
+==> amazon-ebs: Cleaning up any extra volumes...
+==> amazon-ebs: No volumes to clean up, skipping
+==> amazon-ebs: Pausing before cleanup of step 'StepSecurityGroup'. Press enter to continue. 
+==> amazon-ebs: Deleting temporary security group...
+==> amazon-ebs: Pausing before cleanup of step 'StepKeyPair'. Press enter to continue. 
+==> amazon-ebs: Deleting temporary keypair...
+==> amazon-ebs: Pausing before cleanup of step 'StepSourceAMIInfo'. Press enter to continue. 
+==> amazon-ebs: Pausing before cleanup of step 'StepPreValidate'. Press enter to continue. 
+Build 'amazon-ebs' finished.
+
+==> Builds finished. The artifacts of successful builds are:
+--> amazon-ebs: AMIs were created:
+
+us-east-1: ami-fd6c29ea
+[root@univrs packertmpl]#
